@@ -10,10 +10,7 @@ import java.io.IOException;
 
 public class Welcome {
     @FXML
-    private TextField loginFld;
-
-    @FXML
-    private TextField passwordFld;
+    private TextField loginFld, passwordFld;
 
     @FXML
     private Button loginBtn;

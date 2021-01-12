@@ -1,5 +1,6 @@
 package client;
 
+import client.inet.Sockets;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +8,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Client extends Application {
+    public static final String HOST = "localhost";
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -21,5 +24,10 @@ public class Client extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        Sockets.close();
     }
 }
