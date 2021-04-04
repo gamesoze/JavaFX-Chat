@@ -28,10 +28,9 @@ public class Registration {
                 // disable button
                 registrationBtn.setDisable(true);
 
-                Sockets.sendPacketToServer(
-                        new server.packet.Registration(loginFld.getText(), passwordFldBtm.getText()));
+                Sockets.sendPacket(new server.packet.Registration(loginFld.getText(), passwordFldBtm.getText()));
 
-                switch ((Response) Sockets.waitPacketFromServer()) {
+                switch ((Response) Sockets.waitPacket()) {
                     case OK:
                         // new window
                         break;

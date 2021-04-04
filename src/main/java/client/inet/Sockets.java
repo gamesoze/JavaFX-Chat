@@ -23,7 +23,7 @@ public class Sockets {
         }
     }
 
-    public static void sendPacketToServer(Packet packet) {
+    public static void sendPacket(Packet packet) {
         checkInstance();
         try {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
@@ -36,7 +36,7 @@ public class Sockets {
         }
     }
 
-    public static Packet waitPacketFromServer() {
+    public static Packet waitPacket() {
         checkInstance();
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
