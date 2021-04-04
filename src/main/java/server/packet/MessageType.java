@@ -1,0 +1,5 @@
+package server.packet;
+
+public enum MessageType {
+    DISCONNECTED, CONNECTED, STATUS, USER, SERVER, NOTIFICATION, VOICE
+}
